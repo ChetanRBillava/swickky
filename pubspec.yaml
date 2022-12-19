@@ -2,7 +2,7 @@ name: swickky
 description: Swickky, a swiggy clone app.
 
 publish_to: 'none'
-version: 1.0.0+1
+version: 1.0.1+2
 
 environment:
   sdk: '>=2.18.5 <3.0.0'
@@ -10,8 +10,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
   cupertino_icons: ^1.0.2
+  sizer:
+  flutter_bloc:
+  equatable:
+  google_fonts:
 
 dev_dependencies:
   flutter_test:
@@ -22,3 +25,6 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
+  assets:
+    - assets/
+    - assets/images/

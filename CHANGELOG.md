@@ -23,6 +23,22 @@ Here we write the updates of future releases.
 ### Security
 
 
+## [1.0.1] - 19-12-2022
+
+### Added
+- constants folder
+- route exception file
+- app theme file
+- cubit set for app theme
+- app router file
+- splash screen
+- utils folder
+- sizer, flutter bloc, equatable and google fonts plugin
+
+### Changed
+- app logo
+
+
 ## [1.0.0] - 19-12-2022
 
 ### Added
