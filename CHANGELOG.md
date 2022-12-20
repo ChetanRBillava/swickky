@@ -23,6 +23,18 @@ Here we write the updates of future releases.
 ### Security
 
 
+## [1.0.2] - 20-12-2022
+
+### Added
+- Home screen
+- Fading appbar animation/transition added in home screen
+- Home screen cubit set
+- Get color function in theme cubit
+
+### Changed
+- app logo
+
+
 ## [1.0.1] - 19-12-2022
 
 ### Added

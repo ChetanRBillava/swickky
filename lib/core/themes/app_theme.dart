@@ -19,7 +19,9 @@ class AppTheme {
   ///texts
   late Color textColor_1;
   late Color textColor_2;
+  late Color textColor_3;
   late Color textCaptionColor;
+  late Color textCaptionColor2;
 
   ///button
   late Color buttonBackgroundColor;
@@ -48,7 +50,7 @@ class LightTheme extends AppTheme{
 
   @override
   // TODO: implement primary
-  Color get appbarBackgroundColor => const Color(0xffffffff);
+  Color get appbarBackgroundColor => const Color(0xff9b2a00);
 
   @override
   // TODO: implement primary
@@ -86,7 +88,15 @@ class LightTheme extends AppTheme{
 
   @override
   // TODO: implement primary
+  Color get textColor_3 => const Color(0xffffffff);
+
+  @override
+  // TODO: implement primary
   Color get textCaptionColor => const Color(0xff616060);
+
+  @override
+  // TODO: implement primary
+  Color get textCaptionColor2 => const Color(0xffc0bebe);
 
   ///button
   @override
@@ -158,7 +168,15 @@ class DarkTheme extends AppTheme{
 
   @override
   // TODO: implement primary
+  Color get textColor_3 => const Color(0xffa95801);
+
+  @override
+  // TODO: implement primary
   Color get textCaptionColor => const Color(0xffb49f9f);
+
+  @override
+  // TODO: implement primary
+  Color get textCaptionColor2 => const Color(0xffa2a2a2);
 
   ///button
   @override

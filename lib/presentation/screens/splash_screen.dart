@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
@@ -5,7 +7,9 @@ import 'package:swickky/logic/cubit/app_theme_cubit.dart';
 
 import '../../core/constants/images.dart';
 import '../../core/constants/strings.dart';
+import '../router/app_router.dart';
 import '../utils/app_texts.dart';
+import '../utils/custom_text_field.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -15,6 +19,16 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  TextEditingController searchController = TextEditingController();
+
+  @override
+  void initState() {
+    Timer(const Duration(seconds: 5), () {
+      Navigator.of(context).pushNamed(AppRouter.home);
+    });
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<AppThemeCubit, AppThemeState>(
@@ -48,7 +62,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   fontWeight: FontWeight.bold,
                   textColor: (themeState).themeClass.textCaptionColor,
                 ),
-                const CircularProgressIndicator()
+                const CircularProgressIndicator(),
               ],
             ),
           ),

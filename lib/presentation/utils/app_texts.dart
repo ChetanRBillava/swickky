@@ -14,6 +14,7 @@ class AppTexts extends StatefulWidget {
     this.textColor,
     this.textAlign,
     this.fontWeight,
+    this.textOverflow,
   }) : super(key: key);
 
 
@@ -23,6 +24,7 @@ class AppTexts extends StatefulWidget {
   final Color? textColor;
   final TextAlign? textAlign;
   final FontWeight? fontWeight;
+  final TextOverflow? textOverflow;
   @override
   State<AppTexts> createState() => _AppTextsState();
 }
@@ -34,6 +36,7 @@ class _AppTextsState extends State<AppTexts> {
       builder: (context, appThemeState) {
         return Text(
           widget.textString,
+          overflow: widget.textOverflow??TextOverflow.visible,
           textAlign: widget.textAlign??TextAlign.start,
           style: GoogleFonts.roboto(
             textStyle: TextStyle(

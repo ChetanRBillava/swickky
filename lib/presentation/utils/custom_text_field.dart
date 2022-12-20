@@ -52,7 +52,6 @@ class _CustomTextFieldState extends State<CustomTextField> {
     return BlocBuilder<AppThemeCubit, AppThemeState>(
       builder: (context, appThemeState) {
         return TextFormField(
-
           controller: widget.controller,
           validator: widget.validator,
           maxLength: widget.maxLength,
@@ -63,8 +62,11 @@ class _CustomTextFieldState extends State<CustomTextField> {
           obscureText: widget.obscureText??false,
           style: TextStyle(
             color: (appThemeState as AppThemeSet).themeClass.textColor_1,
+            backgroundColor: appThemeState.themeClass.formFieldBackgroundColor,
           ),
           decoration: (widget.prefixIcon!=null && widget.suffixIcon!=null)?InputDecoration(
+            filled: true,
+            fillColor: appThemeState.themeClass.formFieldBackgroundColor,
             prefixIcon: Icon(widget.prefixIcon),
             suffixIcon: widget.suffixIcon,
             labelText: widget.labelText,
@@ -96,6 +98,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
             ),
           ):
           (widget.prefixIcon!=null)?InputDecoration(
+            filled: true,
+            fillColor: appThemeState.themeClass.formFieldBackgroundColor,
             prefixIcon: Icon(widget.prefixIcon),
             labelText: widget.labelText,
             labelStyle: TextStyle(
@@ -126,6 +130,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
             ),
           ):
           (widget.suffixIcon!=null)?InputDecoration(
+            filled: true,
+            fillColor: appThemeState.themeClass.formFieldBackgroundColor,
             suffixIcon: widget.suffixIcon,
             labelText: widget.labelText,
             labelStyle: TextStyle(
@@ -156,6 +162,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
             ),
           ):
           InputDecoration(
+            filled: true,
+            fillColor: appThemeState.themeClass.formFieldBackgroundColor,
             labelText: widget.labelText,
             labelStyle: TextStyle(
                 color: (appThemeState as AppThemeSet).themeClass.textColor_1,

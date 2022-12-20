@@ -13,6 +13,24 @@ class AppThemeCubit extends Cubit<AppThemeState> {
   AppThemeCubit() : super(const AppThemeInitial(
       brightness: Brightness.light));
 
+  Future<Color> getColor(context, String color) async{
+    if(color == 'appBarScrolled'){
+      return (state as AppThemeSet).themeClass.secondaryColor;
+    }
+    else if(color == 'appBarNotScrolled'){
+      return (state as AppThemeSet).themeClass.primaryColor;
+    }
+    else if(color == 'scrolledText'){
+      return (state as AppThemeSet).themeClass.textColor_1;
+    }
+    else if(color == 'notScrolledText'){
+      return (state as AppThemeSet).themeClass.textColor_3;
+    }
+    else{
+      return Colors.transparent;
+    }
+  }
+
 
   void setLightTheme() {
     LightTheme lightTheme = LightTheme();

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
+import 'package:swickky/logic/cubit/home_screen_cubit.dart';
 import 'package:swickky/presentation/router/app_router.dart';
 
 import 'core/constants/strings.dart';
@@ -22,6 +23,9 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) => AppThemeCubit(),
+        ),
+        BlocProvider(
+          create: (context) => HomeScreenCubit(),
         ),
       ],
       child: Sizer(builder: (context, constraints, orientation) {
