@@ -12,6 +12,8 @@ import 'package:swickky/presentation/utils/custom_print.dart';
 import '../../core/constants/images.dart';
 import '../../logic/cubit/app_theme_cubit.dart';
 import '../utils/custom_text_field.dart';
+import '../widgets/food_category_tiles.dart';
+import '../widgets/restaurant_tile.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -24,6 +26,12 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
   final ScrollController _scrollViewController = ScrollController(initialScrollOffset: 0);
   TextEditingController searchController = TextEditingController();
   Timer? timer;
+  List foodImages = [
+    AppImages.food2, AppImages.food3, AppImages.food4, AppImages.food5, AppImages.food6
+  ], restaurantImages = [
+    AppImages.restaurant2, AppImages.restaurant3, AppImages.restaurant4, AppImages.restaurant5
+  ];
+
   @override
   void initState() {
     super.initState();
@@ -170,6 +178,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                           ),
                           sliver: MultiSliver(
                             children: [
+                              ///offer
                               Container(
                                 width: 100.w,
                                 decoration: BoxDecoration(
@@ -390,17 +399,62 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                                   ],
                                 ),
                               ),
-
-                              SliverList(
-                                delegate: SliverChildBuilderDelegate(
-                                      (context, i) => ListTile(
-                                    leading: const CircleAvatar(
-                                      child: Text('0'),
-                                    ),
-                                    title: Text('List tile #$i'),
+                              ///food categories
+                              Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsets.only(left: 5.w, top: 2.h, bottom: 2.h),
+                                        child: AppTexts(
+                                          textString: 'What\'s on your mind?',
+                                          textFontSize: 18.sp,
+                                          textAlign: TextAlign.center,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
                                   ),
-                                  childCount: 25,
-                                ),
+                                  ///horizontal list
+                                  SizedBox(
+                                    width: 100.w,
+                                    height: 15.h,
+                                    child: ListView.builder(
+                                        itemCount: 10,
+                                        scrollDirection: Axis.horizontal,
+                                        itemBuilder: (context, i){
+                                          return FoodCategoryTile(foodImages: foodImages, index: i,);
+                                        }
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              ///restaurants
+                              Column(
+                                children: [
+                                  ///heading
+                                  Row(
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsets.only(left: 5.w, top: 2.h, bottom: 2.h),
+                                        child: AppTexts(
+                                          textString: 'Restaurants to explore',
+                                          textFontSize: 18.sp,
+                                          textAlign: TextAlign.center,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  ListView.builder(
+                                      itemCount: 10,
+                                      shrinkWrap: true,
+                                      physics: const NeverScrollableScrollPhysics(),
+                                      itemBuilder: (context, i){
+                                        return RestaurantsTile(restaurantImages: restaurantImages, index: i);
+                                      }
+                                  ),
+                                ],
                               ),
                             ],
                           ),

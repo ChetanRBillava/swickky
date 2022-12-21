@@ -36,33 +36,38 @@ class _SplashScreenState extends State<SplashScreen> {
         return SafeArea(
           child: Scaffold(
             backgroundColor: (themeState as AppThemeSet).themeClass.backgroundColor,
-            body: Column(
+            body: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(AppImages.logo),
-                AppTexts(
-                  textString: Strings.appDesc,
-                  textFontSize: 14.sp,
-                  textAlign: TextAlign.center,
-                  fontWeight: FontWeight.bold,
-                  textColor: (themeState).themeClass.textColor_1,
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(AppImages.logo),
+                    AppTexts(
+                      textString: Strings.appDesc,
+                      textFontSize: 14.sp,
+                      textAlign: TextAlign.center,
+                      fontWeight: FontWeight.bold,
+                      textColor: (themeState).themeClass.textColor_1,
+                    ),
+                    SizedBox(height: 5.h,),
+                    AppTexts(
+                      textString: Strings.appDev,
+                      textFontSize: 10.sp,
+                      textAlign: TextAlign.center,
+                      fontWeight: FontWeight.bold,
+                      textColor: (themeState).themeClass.textCaptionColor,
+                    ),
+                    AppTexts(
+                      textString: Strings.appVersion,
+                      textFontSize: 10.sp,
+                      textAlign: TextAlign.center,
+                      fontWeight: FontWeight.bold,
+                      textColor: (themeState).themeClass.textCaptionColor,
+                    ),
+                    const CircularProgressIndicator(),
+                  ],
                 ),
-                SizedBox(height: 5.h,),
-                AppTexts(
-                  textString: Strings.appDev,
-                  textFontSize: 10.sp,
-                  textAlign: TextAlign.center,
-                  fontWeight: FontWeight.bold,
-                  textColor: (themeState).themeClass.textCaptionColor,
-                ),
-                AppTexts(
-                  textString: Strings.appVersion,
-                  textFontSize: 10.sp,
-                  textAlign: TextAlign.center,
-                  fontWeight: FontWeight.bold,
-                  textColor: (themeState).themeClass.textCaptionColor,
-                ),
-                const CircularProgressIndicator(),
               ],
             ),
           ),

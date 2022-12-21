@@ -23,6 +23,16 @@ Here we write the updates of future releases.
 ### Security
 
 
+## [1.0.4] - 21-12-2022
+
+### Added
+- Restaurant & food category image banners
+- Restaurant and food category tile widgets
+
+### Changed
+- Cropped the logo image
+
+
 ## [1.0.3] - 21-12-2022
 
 ### Added
