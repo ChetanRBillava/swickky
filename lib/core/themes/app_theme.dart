@@ -15,6 +15,7 @@ class AppTheme {
   late Color dangerColor;
   late Color infoColor;
   late Color warningColor;
+  late Color tileBackground;
 
   ///texts
   late Color textColor_1;
@@ -76,6 +77,10 @@ class LightTheme extends AppTheme{
   @override
   // TODO: implement primary
   Color get warningColor => const Color(0xffffd719);
+
+  @override
+  // TODO: implement primary
+  Color get tileBackground => const Color(0xff11a800);
 
   ///texts
   @override
@@ -156,6 +161,10 @@ class DarkTheme extends AppTheme{
   @override
   // TODO: implement primary
   Color get warningColor => const Color(0xffa95801);
+
+  @override
+  // TODO: implement primary
+  Color get tileBackground => const Color(0xff11a800);
 
   ///texts
   @override

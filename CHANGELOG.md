@@ -23,6 +23,16 @@ Here we write the updates of future releases.
 ### Security
 
 
+## [1.0.3] - 21-12-2022
+
+### Added
+- Food and offer image
+- Offer widget in home screen
+
+### Changed
+- Cropped the logo image
+
+
 ## [1.0.2] - 20-12-2022
 
 ### Added
@@ -30,9 +40,6 @@ Here we write the updates of future releases.
 - Fading appbar animation/transition added in home screen
 - Home screen cubit set
 - Get color function in theme cubit
-
-### Changed
-- app logo
 
 
 ## [1.0.1] - 19-12-2022
