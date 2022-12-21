@@ -60,7 +60,7 @@ android {
             signingConfig signingConfigs.debug
             applicationVariants.all { variant ->
                 variant.outputs.each { output ->
-                    def name = "Swickky(Swiggy clone) V1.0.0.apk"
+                    def name = "Swickky(Swiggy clone) V1.0.4.apk"
                     output.outputFileName = name
                 }
             }

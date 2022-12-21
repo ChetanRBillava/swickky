@@ -23,6 +23,51 @@ Here we write the updates of future releases.
 ### Security
 
 
+## [1.0.4] - 21-12-2022
+
+### Added
+- Restaurant & food category image banners
+- Restaurant and food category tile widgets
+
+### Changed
+- Cropped the logo image
+
+
+## [1.0.3] - 21-12-2022
+
+### Added
+- Food and offer image
+- Offer widget in home screen
+
+### Changed
+- Cropped the logo image
+
+
+## [1.0.2] - 20-12-2022
+
+### Added
+- Home screen
+- Fading appbar animation/transition added in home screen
+- Home screen cubit set
+- Get color function in theme cubit
+
+
+## [1.0.1] - 19-12-2022
+
+### Added
+- constants folder
+- route exception file
+- app theme file
+- cubit set for app theme
+- app router file
+- splash screen
+- utils folder
+- sizer, flutter bloc, equatable and google fonts plugin
+
+### Changed
+- app logo
+
+
 ## [1.0.0] - 19-12-2022
 
 ### Added
